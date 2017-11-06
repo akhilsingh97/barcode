@@ -1,0 +1,17 @@
+<md-card class="text-center">
+  <h3 class="text-center">Barcode Scanner</h3>
+  <p>Scan via webcam/camera</p>
+  <div class="flex-container" fxLayout="row" fxLayoutAlign="center center">
+    
+    <div class="flex-item" [routerLink]="['media']">
+      <button>
+        <md-icon>camera</md-icon>
+      </button>
+    </div>
+  </div>
+</md-card>
+
+<md-card>
+  <router-outlet></router-outlet>
+</md-card>
+

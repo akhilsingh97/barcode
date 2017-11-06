@@ -1,0 +1,31 @@
+<div class="flex-container" fxLayout="row" fxLayout.xs="column"
+     fxLayoutAlign="center center"
+     fxLayoutAlign.xs="start">
+
+  <md-card class="flex-item" fxFlex="50">
+    
+    <div id="interactive" class="viewport clearfix" #interactive></div>
+
+    <div class="show__sm" *ngIf="lastResult">
+      <p>Your Code is</p>
+      <p>{{ lastResult || async }}'</p>
+      <p *ngIf="!message">Searching...</p>
+      <p *ngIf="message">{{message}}</p>
+    </div>
+  </md-card>
+
+  <md-card class="flex-item app-input-section hidden__sm" fxFlex="50" *ngIf="lastResult">
+
+    <div >
+     
+          
+          <span>Your Code is</span>
+          <p>{{ lastResult || async }}'</p>
+          <em *ngIf="!message">Searching...</em>
+          <p *ngIf="message">{{message}}</p>
+        
+    </div>
+  </md-card>
+</div>
+
+
